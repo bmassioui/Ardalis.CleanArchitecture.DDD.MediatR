@@ -1,0 +1,224 @@
+2023-11-30 11:44:58.083 -05:00 [INF] Registered 5 endpoints in 1655 milliseconds.
+2023-11-30 11:44:59.393 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2023-11-30 11:44:59.435 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL
+);
+2023-11-30 11:44:59.537 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2023-11-30 11:44:59.558 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status"
+FROM "Contributors" AS "c"
+2023-11-30 11:44:59.619 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2023-11-30 11:44:59.627 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2023-11-30 11:44:59.791 -05:00 [INF] Now listening on: http://localhost:57679
+2023-11-30 11:44:59.792 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-30 11:44:59.793 -05:00 [INF] Hosting environment: Development
+2023-11-30 11:44:59.793 -05:00 [INF] Content root path: C:\dev\github-ardalis\YouTubeDemos\ValidationInMediatRPipelines\NimblePros.MediatRValidation\src\NimblePros.MediatRValidation.Web
+2023-11-30 11:45:00.045 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger - null null
+2023-11-30 11:45:00.205 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger - 302 0 null 161.2604ms
+2023-11-30 11:45:00.209 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/index.html - null null
+2023-11-30 11:45:00.401 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 191.8337ms
+2023-11-30 11:45:00.408 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/swagger-ui.css - null null
+2023-11-30 11:45:00.411 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/index.css - null null
+2023-11-30 11:45:00.412 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/swagger-ui-bundle.js - null null
+2023-11-30 11:45:00.412 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/swagger-ui-standalone-preset.js - null null
+2023-11-30 11:45:00.412 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2023-11-30 11:45:00.416 -05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2023-11-30 11:45:00.417 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-30 11:45:00.420 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-11-30 11:45:00.422 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 9.4269ms
+2023-11-30 11:45:00.422 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/index.css - 200 218 text/css 10.6819ms
+2023-11-30 11:45:00.423 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-11-30 11:45:00.424 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/swagger-ui.css - 200 151213 text/css 15.4911ms
+2023-11-30 11:45:00.424 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/swagger-ui-standalone-preset.js - 200 230642 text/javascript 11.826ms
+2023-11-30 11:45:00.431 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/swagger-ui-bundle.js - 200 1385018 text/javascript 18.5578ms
+2023-11-30 11:45:00.454 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_vs/browserLink - null null
+2023-11-30 11:45:00.472 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.4983ms
+2023-11-30 11:45:00.620 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - null null
+2023-11-30 11:45:00.648 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-11-30 11:45:00.970 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 350.1197ms
+2023-11-30 11:45:11.385 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:57679/Contributors - application/json 48
+2023-11-30 11:45:11.387 -05:00 [WRN] Failed to determine the https port for redirect.
+2023-11-30 11:45:11.389 -05:00 [INF] Executing endpoint 'HTTP: POST /Contributors'
+2023-11-30 11:45:11.442 -05:00 [INF] Executed endpoint 'HTTP: POST /Contributors'
+2023-11-30 11:45:11.445 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:57679/Contributors - 400 null application/problem+json 59.4919ms
+2023-11-30 11:56:13.494 -05:00 [INF] Registered 5 endpoints in 190 milliseconds.
+2023-11-30 11:56:13.815 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-11-30 11:56:13.891 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2023-11-30 11:56:13.923 -05:00 [INF] Now listening on: http://localhost:57679
+2023-11-30 11:56:13.924 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-30 11:56:13.925 -05:00 [INF] Hosting environment: Development
+2023-11-30 11:56:13.925 -05:00 [INF] Content root path: C:\dev\github-ardalis\YouTubeDemos\ValidationInMediatRPipelines\NimblePros.MediatRValidation\src\NimblePros.MediatRValidation.Web
+2023-11-30 11:56:14.290 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/index.html - null null
+2023-11-30 11:56:14.381 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 91.5262ms
+2023-11-30 11:56:14.394 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2023-11-30 11:56:14.396 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 2.5384ms
+2023-11-30 11:56:14.405 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_vs/browserLink - null null
+2023-11-30 11:56:14.421 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.7979ms
+2023-11-30 11:56:14.481 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - null null
+2023-11-30 11:56:14.485 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-11-30 11:56:14.490 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/favicon-32x32.png - null null
+2023-11-30 11:56:14.495 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-30 11:56:14.496 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/favicon-32x32.png - 200 628 image/png 5.6561ms
+2023-11-30 11:56:14.701 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 219.7785ms
+2023-11-30 11:56:26.203 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57679/Contributors/-1 - null null
+2023-11-30 11:56:26.209 -05:00 [WRN] Failed to determine the https port for redirect.
+2023-11-30 11:56:26.213 -05:00 [INF] Executing endpoint 'HTTP: DELETE /Contributors/{ContributorId:int}'
+2023-11-30 11:56:26.237 -05:00 [INF] Handling DeleteContributorCommand
+2023-11-30 11:56:26.239 -05:00 [INF] Property ContributorId : -1
+2023-11-30 11:56:26.248 -05:00 [INF] Deleting Contributor -1
+2023-11-30 11:56:26.353 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__p_0
+LIMIT 1
+2023-11-30 11:56:26.357 -05:00 [INF] Handled DeleteContributorCommand with Ardalis.Result.Result in 117 ms
+2023-11-30 11:56:26.360 -05:00 [INF] Executed endpoint 'HTTP: DELETE /Contributors/{ContributorId:int}'
+2023-11-30 11:56:26.364 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57679/Contributors/-1 - 404 null null 160.9462ms
+2023-11-30 11:57:04.064 -05:00 [INF] Registered 5 endpoints in 196 milliseconds.
+2023-11-30 11:57:04.405 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-11-30 11:57:04.480 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2023-11-30 11:57:04.514 -05:00 [INF] Now listening on: http://localhost:57679
+2023-11-30 11:57:04.515 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-30 11:57:04.516 -05:00 [INF] Hosting environment: Development
+2023-11-30 11:57:04.516 -05:00 [INF] Content root path: C:\dev\github-ardalis\YouTubeDemos\ValidationInMediatRPipelines\NimblePros.MediatRValidation\src\NimblePros.MediatRValidation.Web
+2023-11-30 11:57:04.817 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/index.html - null null
+2023-11-30 11:57:04.910 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 93.782ms
+2023-11-30 11:57:04.923 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2023-11-30 11:57:04.926 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 2.6581ms
+2023-11-30 11:57:04.934 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_vs/browserLink - null null
+2023-11-30 11:57:04.946 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.1023ms
+2023-11-30 11:57:05.024 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - null null
+2023-11-30 11:57:05.028 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-11-30 11:57:05.252 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 227.5301ms
+2023-11-30 11:57:09.590 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57679/Contributors/-1 - null null
+2023-11-30 11:57:09.593 -05:00 [WRN] Failed to determine the https port for redirect.
+2023-11-30 11:57:09.594 -05:00 [INF] Executing endpoint 'HTTP: DELETE /Contributors/{ContributorId:int}'
+2023-11-30 11:57:09.613 -05:00 [INF] Handling DeleteContributorCommand
+2023-11-30 11:57:09.613 -05:00 [INF] Property ContributorId : -1
+2023-11-30 11:57:09.618 -05:00 [INF] Deleting Contributor -1
+2023-11-30 11:57:09.688 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."Name", "c"."Status"
+FROM "Contributors" AS "c"
+WHERE "c"."Id" = @__p_0
+LIMIT 1
+2023-11-30 11:57:09.692 -05:00 [INF] Handled DeleteContributorCommand with Ardalis.Result.Result in 77 ms
+2023-11-30 11:57:09.693 -05:00 [INF] Executed endpoint 'HTTP: DELETE /Contributors/{ContributorId:int}'
+2023-11-30 11:57:09.696 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57679/Contributors/-1 - 404 null null 106.295ms
+2023-11-30 11:58:31.169 -05:00 [INF] Registered 5 endpoints in 169 milliseconds.
+2023-11-30 11:58:31.511 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-11-30 11:58:31.588 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2023-11-30 11:58:31.623 -05:00 [INF] Now listening on: http://localhost:57679
+2023-11-30 11:58:31.624 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-30 11:58:31.624 -05:00 [INF] Hosting environment: Development
+2023-11-30 11:58:31.625 -05:00 [INF] Content root path: C:\dev\github-ardalis\YouTubeDemos\ValidationInMediatRPipelines\NimblePros.MediatRValidation\src\NimblePros.MediatRValidation.Web
+2023-11-30 11:58:31.893 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/index.html - null null
+2023-11-30 11:58:31.984 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 91.3001ms
+2023-11-30 11:58:31.995 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2023-11-30 11:58:31.998 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 2.6956ms
+2023-11-30 11:58:32.007 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_vs/browserLink - null null
+2023-11-30 11:58:32.019 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.4475ms
+2023-11-30 11:58:32.086 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - null null
+2023-11-30 11:58:32.091 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-11-30 11:58:32.317 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 231.0764ms
+2023-11-30 11:58:34.858 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/index.html - null null
+2023-11-30 11:58:34.863 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 4.5702ms
+2023-11-30 11:58:34.876 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2023-11-30 11:58:34.876 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_vs/browserLink - null null
+2023-11-30 11:58:34.878 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 1.8937ms
+2023-11-30 11:58:34.885 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.256ms
+2023-11-30 11:58:34.943 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - null null
+2023-11-30 11:58:34.945 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 2.1169ms
+2023-11-30 11:59:00.475 -05:00 [INF] Registered 5 endpoints in 164 milliseconds.
+2023-11-30 11:59:00.812 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-11-30 11:59:00.891 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2023-11-30 11:59:00.924 -05:00 [INF] Now listening on: http://localhost:57679
+2023-11-30 11:59:00.924 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-30 11:59:00.925 -05:00 [INF] Hosting environment: Development
+2023-11-30 11:59:00.925 -05:00 [INF] Content root path: C:\dev\github-ardalis\YouTubeDemos\ValidationInMediatRPipelines\NimblePros.MediatRValidation\src\NimblePros.MediatRValidation.Web
+2023-11-30 11:59:01.365 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/index.html - null null
+2023-11-30 11:59:01.463 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 99.1032ms
+2023-11-30 11:59:01.475 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_vs/browserLink - null null
+2023-11-30 11:59:01.475 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2023-11-30 11:59:01.479 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 3.7037ms
+2023-11-30 11:59:01.489 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.7398ms
+2023-11-30 11:59:01.552 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - null null
+2023-11-30 11:59:01.555 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2023-11-30 11:59:01.772 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 220.5273ms
+2023-11-30 11:59:15.618 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:57679/Contributors - application/json 48
+2023-11-30 11:59:15.620 -05:00 [WRN] Failed to determine the https port for redirect.
+2023-11-30 11:59:15.622 -05:00 [INF] Executing endpoint 'HTTP: POST /Contributors'
+2023-11-30 11:59:15.662 -05:00 [INF] Executed endpoint 'HTTP: POST /Contributors'
+2023-11-30 11:59:15.665 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:57679/Contributors - 400 null application/problem+json 46.8947ms
+2023-11-30 11:59:18.963 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57679/Contributors/-1 - null null
+2023-11-30 11:59:18.965 -05:00 [INF] Executing endpoint 'HTTP: DELETE /Contributors/{ContributorId:int}'
+2023-11-30 11:59:18.975 -05:00 [INF] Handling DeleteContributorCommand
+2023-11-30 11:59:18.976 -05:00 [INF] Property ContributorId : -1
+2023-11-30 11:59:18.982 -05:00 [INF] Executed endpoint 'HTTP: DELETE /Contributors/{ContributorId:int}'
+2023-11-30 11:59:18.983 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+FluentValidation.ValidationException: Validation failed: 
+ -- ContributorId: 'Contributor Id' must be greater than '0'. Severity: Error
+   at NimblePros.MediatRValidation.UseCases.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\dev\github-ardalis\YouTubeDemos\ValidationInMediatRPipelines\NimblePros.MediatRValidation\src\NimblePros.MediatRValidation.UseCases\ValidationBehavior.cs:line 42
+   at Ardalis.SharedKernel.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at NimblePros.MediatRValidation.Web.ContributorEndpoints.Delete.HandleAsync(DeleteContributorRequest request, CancellationToken cancellationToken) in C:\dev\github-ardalis\YouTubeDemos\ValidationInMediatRPipelines\NimblePros.MediatRValidation\src\NimblePros.MediatRValidation.Web\Contributors\Delete.cs:line 30
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Ardalis.ListStartupServices.ShowAllServicesMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-11-30 11:59:19.013 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57679/Contributors/-1 - 500 null text/plain; charset=utf-8 49.7104ms
+2023-11-30 11:59:22.338 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:57679/Contributors - application/json 48
+2023-11-30 11:59:22.340 -05:00 [INF] Executing endpoint 'HTTP: POST /Contributors'
+2023-11-30 11:59:22.341 -05:00 [INF] Executed endpoint 'HTTP: POST /Contributors'
+2023-11-30 11:59:22.342 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:57679/Contributors - 400 null application/problem+json 3.8782ms
+2023-11-30 11:59:33.103 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57679/Contributors/-1 - null null
+2023-11-30 11:59:33.105 -05:00 [INF] Executing endpoint 'HTTP: DELETE /Contributors/{ContributorId:int}'
+2023-11-30 11:59:33.106 -05:00 [INF] Handling DeleteContributorCommand
+2023-11-30 11:59:33.107 -05:00 [INF] Property ContributorId : -1
+2023-11-30 11:59:33.108 -05:00 [INF] Executed endpoint 'HTTP: DELETE /Contributors/{ContributorId:int}'
+2023-11-30 11:59:33.109 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+FluentValidation.ValidationException: Validation failed: 
+ -- ContributorId: 'Contributor Id' must be greater than '0'. Severity: Error
+   at NimblePros.MediatRValidation.UseCases.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\dev\github-ardalis\YouTubeDemos\ValidationInMediatRPipelines\NimblePros.MediatRValidation\src\NimblePros.MediatRValidation.UseCases\ValidationBehavior.cs:line 42
+   at Ardalis.SharedKernel.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at NimblePros.MediatRValidation.Web.ContributorEndpoints.Delete.HandleAsync(DeleteContributorRequest request, CancellationToken cancellationToken) in C:\dev\github-ardalis\YouTubeDemos\ValidationInMediatRPipelines\NimblePros.MediatRValidation\src\NimblePros.MediatRValidation.Web\Contributors\Delete.cs:line 30
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Ardalis.ListStartupServices.ShowAllServicesMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-11-30 11:59:33.111 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57679/Contributors/-1 - 500 null text/plain; charset=utf-8 8.5429ms
